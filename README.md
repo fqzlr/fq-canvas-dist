@@ -26,7 +26,7 @@ fq-canvas-local-v0.00.0/
 ## 使用步骤
 
 1. 解压压缩包，双击 `start.bat`；
-2. 稍等 2 秒，浏览器会自动打开 `http://localhost:3000`；
+2. 稍等 2 秒，浏览器会自动打开 `http://localhost:3031`；
 3. 在页面右上角的配置里填写 OpenAI 兼容接口的 Base URL 与 API Key，即可开始使用。
 
 关闭浏览器后本地服务仍在后台运行；不需要时双击 `stop.bat` 停止。
@@ -43,11 +43,11 @@ fq-canvas-local-v0.00.0/
 
 ```bash
 cd web/dist
-python -m http.server 3000
-# 或 npx serve -l 3000
+python -m http.server 3031
+# 或 npx serve -l 3031
 ```
 
-然后访问 `http://localhost:3000`。
+然后访问 `http://localhost:3031`。
 
 ## 更新
 
@@ -61,16 +61,16 @@ python -m http.server 3000
 
 画布、我的素材、生成记录和 API Key 默认保存在**浏览器本地**，不会上传到服务器，也不在本仓库中。
 
-- 数据按「协议 + 端口」隔离，请保持使用 `http://localhost:3000`，换端口或换访问地址会看不到原有数据；
+- 数据按「协议 + 端口」隔离，请保持使用 `http://localhost:3031`，换端口或换访问地址会看不到原有数据；
 - 清理浏览器缓存、更换浏览器或使用无痕窗口会导致数据丢失，重要画布请先在应用内导出备份。
 
 ## 常见问题
 
 **双击 start.bat 后浏览器没有打开**
 
-手动访问 `http://localhost:3000`；如果仍然打不开，说明端口被占用，先运行 `stop.bat`。
+手动访问 `http://localhost:3031`；如果仍然打不开，说明端口被占用，先运行 `stop.bat`。
 
-**端口 3000 已被其他程序占用**
+**端口 3031 已被其他程序占用**
 
 `start.bat` 会直接打开已占用该端口的页面。请先关闭占用程序，或修改 `serve.ps1` 与 `start.bat` 中的端口（两端需一致）。改端口后浏览器数据会另起一份。
 
